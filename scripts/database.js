@@ -11,6 +11,23 @@ export const database = {
       power: "Super speed",
     },
   ],
+  villians: [
+    {
+      id: 1,
+      name: "Not Scary",
+      power: "Not Scary At All",
+    },
+    {
+      id: 2,
+      name: "Hyperslow",
+      power: "Sloth speed",
+    },
+  ],
 };
 
-module.exports = { database };
+export const getHeroes = () => {
+  return database.heroes.map((hero) => ({ ...hero }));
+};
+export const getVillians = () => {
+  return database.villians.map((villian) => ({ ...villian }));
+};
